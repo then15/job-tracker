@@ -10,8 +10,8 @@ A full stack MERN application to track and manage job applications efficiently.
 
 ## 🌟 Live Demo
 
-- **Frontend:** https://job-tracker.vercel.app
-- **Backend:** https://job-tracker-api.onrender.com
+- **Frontend:**  https://job-tracker.vercel.app
+- **Backend:**  https://job-tracker-api.onrender.com
 
 ## 🎯 Features
 
