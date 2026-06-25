@@ -27,7 +27,7 @@ function Dashboard() {
 
   const fetchJobs = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/jobs', {
+      const response = await axios.get('https://job-tracker-jyss.onrender.com/api/jobs', {
         headers: { Authorization: `Bearer ${token}` }
       })
       setJobs(response.data)
@@ -50,7 +50,7 @@ function Dashboard() {
   const handleAddJob = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:5000/api/jobs', newJob, {
+      await axios.post('https://job-tracker-jyss.onrender.com/api/jobs', newJob, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setShowForm(false)
@@ -69,7 +69,7 @@ function Dashboard() {
   const handleUpdate = async (e) => {
     e.preventDefault()
     try {
-      await axios.put(`http://localhost:5000/api/jobs/${editJob._id}`, editJob, {
+      await axios.put(`https://job-tracker-jyss.onrender.com/api/jobs/${editJob._id}`, editJob, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setShowEditForm(false)
@@ -82,7 +82,7 @@ function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/jobs/${id}`, {
+      await axios.delete(`https://job-tracker-jyss.onrender.com/api/jobs/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       fetchJobs()
